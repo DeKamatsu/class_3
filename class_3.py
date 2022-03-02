@@ -1,6 +1,8 @@
 # class_3
-# Working with list
 
+
+# Working with list
+"""
 b = ['text_1','text_2']
 print (b[1])
 
@@ -62,3 +64,47 @@ print(f"Number of 10 in list: {some_list.index('10')}")
 some_list = ['134', 'f2', '3', '34', '315', '10', '7', '8', ]
 some_list.sort()
 print(f"Print sorted list: {some_list}")
+
+some_list.reverse()
+print(f"Print sorted backward list: {some_list}")
+some_list.clear()
+
+# Не глубокая копия: место экономится: 2 имени для одного участка памяти - после очистки имеем 2 пустых списка
+some_list = ['134', 'f2', '3', '34', '315', '10', '7', '8', ]
+list_copy = some_list
+some_list.clear()
+print(list_copy)
+print(some_list)
+
+# Глубокая копия: место экономится: 2 имени для одного участка памяти - после очистки имеем 2 пустых списка
+some_list = ['134', 'f2', '3', '34', '315', '10', '7', '8', ]
+list_copy ----------
+some_list.clear()
+print(list_copy)
+print(some_list)
+"""
+
+# Working with tuple
+some_tuple = ('134', 'f2', '3', '34', '315', '10', '7', '8', )
+print(some_tuple)
+
+"""
+#Генератор - что-то не работает
+t = ()
+t = (n for n in range(1,5))
+print (t)
+"""
+
+a = () # Почему не создается кортеж сразу на основе элементов?
+b = 'text'
+c = 'text_2'
+d = 'text_3'
+a = tuple ((a, b, d))
+lit = tuple(b)
+print (a)
+print(lit)
+
+# Working with set
+
+some_set = set(a)
+
